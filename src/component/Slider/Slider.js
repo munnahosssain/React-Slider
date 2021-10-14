@@ -32,9 +32,6 @@ export default function Slider() {
     const handleClick = (way) => {
         way === "left" ? setCurrentSlider(currentSlider > 0 ? currentSlider - 1 : 2) : setCurrentSlider(currentSlider < data.length - 1 ? currentSlider + 1 : 0);
     }
-    const handleClickRight = (way) => {
-        way === "right" ? setCurrentSlider(currentSlider < 0 ? currentSlider + 1 : 0) : setCurrentSlider(currentSlider > data.length + 1 ? currentSlider - 1 : 2);
-    }
 
     return (
         <div className="work" id="work">
@@ -62,7 +59,7 @@ export default function Slider() {
                 }
             </div>
             <FontAwesomeIcon className="arrow left" onClick={() => handleClick("left")} icon={faChevronLeft} />
-            <FontAwesomeIcon className="arrow right" onClick={() => handleClickRight("right")} icon={faChevronRight} />
+            <FontAwesomeIcon className="arrow right" onClick={() => handleClick("right")} icon={faChevronRight} />
         </div>
     );
 };
