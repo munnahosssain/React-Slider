@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Slider from './component/Slider/Slider';
 

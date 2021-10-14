@@ -1,24 +1,24 @@
 .work {
-    background-color: crimson;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
     height: 100vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: crimson;
 }
 
 .slider {
     height: 35vh;
     display: flex;
     position: absolute;
-    left: 0;
-    /* border-radius: 20px; */
+    left: 0vw;
+    transition: all 1s ease-out;
 }
 
 .container {
     display: flex;
     justify-content: center;
     width: 100vw;
-    /* border-radius: 20px !important; */
 }
 
 .item {
@@ -27,22 +27,79 @@
     background-color: #fff;
     align-items: center;
     justify-content: center;
-    border-radius:30px;
+    border-radius: 30px;
     display: flex;
-    
+}
+
+.left-part {
+    flex: 6;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgContainer {
+    color: darkgoldenrod;
+    height: 70px;
+    background-color: greenyellow;
+    border-radius: 50%;
+}
+
+.leftContainer {
+    width: 90%;
+    /* height: 70%; */
+    display: flex;
+}
+
+.right-part {
+    flex: 6;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* background-color: yellow; */
+    border-radius: 0 30px 30px 0;
+}
+
+.right-img {
+    height: 115%;
+    transform: rotate(-9deg)
+}
+
+h2 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 17px;
+}
+
+span {
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* ---------------- ARROWS --------------- */
+
+.arrow {
+    /* position: absolute; */
+    z-index: 1;
+    height: 50px;
+    cursor: pointer;
 }
 
 .left {
     flex: 6;
-    height: 100%;
-    /* background-color: yellowgreen; */
-    align-items: center;
-    justify-content: center;
-    display: flex;
+    left: 100px;
+    /* transform: rotateY(180deg) */
 }
-
-.right {
+.right{
     flex: 6;
-    height: 100%;
-    /* background-color: yellow; */
+    right: 100px;
+    /* transform: rotateX(180deg) */
+    background-repeat: red;
 }
